@@ -1,0 +1,19 @@
+server:
+  port: 8002
+  servlet:
+    application-display-name: display-2
+spring:
+  application:
+    name: service
+
+eureka:
+  instance:
+    hostname: peer2
+  client:
+    service-url:
+      defaultZone: http://peer:8000/eureka/,http://peer1:8001/eureka/
+    fetch-registry: false
+    register-with-eureka: false
+
+  server:
+    wait-time-in-ms-when-sync-empty: 0
